@@ -1,3 +1,9 @@
+# Andy Lin
+# SoftDev
+# K01 -- random student selector but without the actual student names
+# 2021-09-21
+
+
 from random import randrange
 
 def openNameFile():
