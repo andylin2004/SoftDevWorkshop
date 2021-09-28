@@ -1,7 +1,10 @@
 import random
 
-file = open("occupations.csv")
+file = open("occupations.csv", "r")
 occupations = {}
 for line in file:
-    splitLine = line.split(",")
-    occupations[splitLine[1]].append(splitLine[2])
+    newLine = line.strip()
+    splitLine = newLine.split(",")
+    occupations[splitLine[0]] = splitLine[1]
+
+print(occupations)
