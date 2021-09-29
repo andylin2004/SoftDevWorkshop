@@ -1,3 +1,11 @@
+# Hi-C: Andy Lin, Yaying Liang, Josephine Lee
+# SoftDev
+# K06 - weighted RNG job selector based on the percentages given
+# 2021-09-28
+
+# Summary of trio discussion
+# We discussed about structuring the data, adhering with the instructions given. Also discussed about how to go through the given csv pairs (there were some quotes around that screwed things over). Also random.choices (and the implications of going that route) and getting keys or values of a dict in python
+
 import random
 
 # reading the file
