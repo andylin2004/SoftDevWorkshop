@@ -1,10 +1,17 @@
-# Hi-C: Andy Lin, Yaying Liang, Josephine Lee
-# SoftDev
-# K06 - weighted RNG job selector based on the percentages given
-# 2021-09-28
+#Team Name: Hi-C; Yaying Liang Li, Andy Lin, Josephine Lee
+#SoftDev
+#K06 -- Reading CSV Files
+#2021-09-28
 
-# Summary of trio discussion
-# We discussed about structuring the data, adhering with the instructions given. Also discussed about how to go through the given csv pairs (there were some quotes around that screwed things over). Also random.choices (and the implications of going that route) and getting keys or values of a dict in python
+#Our program starts by reading the file and removing the new lines off each occupation in the CSV file.
+#Because some of the jobs have commas (outside of separating the job and the percentage), we decided to
+#manually split the lines. For every line in the file, go through every char in the line, and if we
+#see a comma and it's not part of the quoted info, add that value to the temporary storing list.
+#if we see a comma and it is within the quotes, don't separate - keep adding the char into our temp.
+#storing String. Add info in temp. list to our dictionary, and get weighted choices using random.choices.
+
+#for random.choices, population (list of "choices") and weights (list of the weights
+#of these choices) must be of the same list size
 
 import random
 
@@ -23,10 +30,10 @@ for line in file:
     samplingLine = ""
     # looping thru each character in string
     for char in line:
-        if char == '"':
-            # don't add; just anknoledge that we should ignore commas in terms of splitting until we see another quote
+        if char == '"': 
+            # don't add; just acknowledge that we should ignore commas in terms of splitting until we see another quote
             quotes = not quotes
-        elif char == ',' and not quotes:
+        elif char == ',' and not quotes: #we see a comma, and it's not part of the quoted info --> add value to the temporary storing list
             # append to splitLine and clear the samplingLine buffer
             splitLine.append(samplingLine)
             samplingLine = ""
@@ -35,6 +42,7 @@ for line in file:
             samplingLine += char
     # add last section after loop ends
     splitLine.append(samplingLine)
+    
     # ignore total and header definitions
     if splitLine[1] != "Percentage" and splitLine[0] != "Total":
         occupations[splitLine[0]] = float(splitLine[1])
