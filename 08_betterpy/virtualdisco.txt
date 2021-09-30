@@ -1,3 +1,8 @@
-The python3 -m venv ~/myherozero command will make a new Python virtual enviroment that is called myherozero in your HOME directory such that you can install a set of packages that might be on an older version and not have it collide with a newer version of a package that is installed globally. This way, you can run legacy packages that a script may be dependent on and is costoly to rebuild for a newer version of the Python file.
+Intel Sucks; Andy Lin, Jonathan Wu, Andrew Juang
+SoftDev
+K08 -- learning what python3 -m venv ~/myherozero does and the significance of it
+2021-09-30
+
+The python3 -m venv ~/myherozero command will make a new Python virtual enviroment that is called myherozero in your HOME directory. You can install a set of packages that might be on an older version and not have it collide with a newer version of a package that is installed globally. This way, you can run legacy packages that a script may be dependent on and is costoly to rebuild for a newer version of the Python file.
 
 Source: https://docs.python.org/3/tutorial/venv.html

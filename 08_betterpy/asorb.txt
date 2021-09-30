@@ -1,5 +1,9 @@
-Questions: What does pandas do? (an external library that can help with reading csv files, according to Jonathan)
+Intel Sucks; Andy Lin, Jonathan Wu, Andrew Juang
+SoftDev
+K08 -- learning about the programming techniques of my new trio mates, getting to know why they did the python script a different way.
+2021-09-30
 
+Questions: What does pandas do? (an external library that can help with reading csv files, according to Jonathan)
 
 Comments: I'm surprised that using external libraries are allowed in the K06 assignment--I thought that it was illegal. Also pulling the data from a web address to a python script is an intresting idea--although I would personally not want to try this because I'd rather make there are less layers to failure.
 
