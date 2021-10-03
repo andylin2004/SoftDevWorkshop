@@ -1,0 +1,20 @@
+Top Hat Cats: Andy Lin, Cappy, Qina Liu, Nyx
+SoftDev
+K09- Flask and app.py questions
+2021-10-01
+
+Before running flask:
+Q0: Qina only know Java. This looks vaguely familiar but not really. I know Swift, Java, Lua, some C, and some C+, and this formatting doesn't strike me as familiar. However, throwing the code into a linter, the linter doesn't throw any errors for this. The closest thing Andy can think of is Swift and how it can detect these predefined variables for minor and major version numbers.
+Q1: The main point of reference Qina have is that / is used to illustrate pathways. However, Andy think the "/" indicates that the script is looking at the main directory virtual enviroment.
+Q2: This will print to command terminal. It will print __name__ (idk what __name__ is, however Andy guess its the name of the instance?)
+Q3: This will not appear anywhere because it is a return for the function hello_world, but the code never prints out this return or gets assigned to a variable that would then get printed out.
+Q4: The only other language Qina know is Java, and Java has similar syntax to this that it uses to call methods. Andy has seen this when programming in Swift, Java, and Lua, as the former two have this as an element of OOP, and the latter uses this formatting too, but Andy doesn't know why.
+
+After running flask:
+
+- At first, we were  getting an error: WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+    - Running the shell command export FLASK_ENV=development changed the environment to development, and we no longer got the error 
+        - info from https://pythonbasics.org/flask-environment-production/
+- After we fixed the error, nothing really happened, and Qina do not know where to go from here.
+- Andy decided to copy and paste the virtual server IP address into Safari, and I wasn't able to connect due to the fact that Safari couldn't connect to the server address.
+- Extending Q2, Andy thinks __name__ is the python script name.
