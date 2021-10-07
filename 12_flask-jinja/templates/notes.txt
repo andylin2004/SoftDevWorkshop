@@ -1,0 +1,13 @@
+Team Name: Hi-C: Yaying Liang Li, Andy Lin, Josephine Lee
+SoftDev
+K12 -- looking into the use of render_template
+2021-10-07
+
+Q0: We think that the Python IDLE engine would throw an error that a function was used that has never been defined at all. The web server would return an internal server error.
+Q1: We think that the URL will be https://localhost:5000/my_foist_template.
+Q2: The significance of the first argument is basically the template html file to insert other arguments into. foo and collection are arguments that come from the template .html file in order to be shown on the website.
+
+Side notes:
+
+{{ var }} is used to render out a variable
+{% function call %} -- is this a notation for running functions for the site instead of rendering the variable out?
