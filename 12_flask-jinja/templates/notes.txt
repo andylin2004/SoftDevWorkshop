@@ -11,4 +11,4 @@ Side notes:
 
 {{ var }} is used to render out a variable
 {% function call %} -- is this a notation for running functions for the site instead of rendering the variable out?
-What if we have a func that uses decorator @app.route("")?
+What if we have a func that uses decorator @app.route("")? (Python throws an error)
