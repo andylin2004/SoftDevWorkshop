@@ -1,0 +1,21 @@
+Team Name: Hi-C: Yaying Liang Li, Andy Lin, Josephine Lee
+SoftDev
+K11 -- Some Things Never Change
+2021-10-06
+
+-"Does foo just not have a file extension?"
+	-okay, let's just open it then
+	$nano foo
+	$gedit foo
+	$cat foo
+-Is there a windows equivalent for cat?
+-Difference between website and webpage?
+
+Predictions:
+-When we access the foo file via the localhost link, we predict that the computer will download the file. Andy experimented with the link and added .txt to the end of the link and also added .txt as the file extension of foo - when he did this, the webpage printed out the contents of the file. We hypothesized that the computer doesn't understand what to do with files without file extensions, and so it'll download the file.
+
+Observations:
+-When we copied the link in foo and we went to the local host, the web page prompted us to download the file foo (plain text).
+-Whereas when we went to foo.html, the website loaded the phrase "Is this plaintext, though?," but it didn't prompt us to download any files.
+
+<!-- --> means a comment in html files
