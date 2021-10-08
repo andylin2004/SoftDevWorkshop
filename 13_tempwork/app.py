@@ -6,7 +6,6 @@
 from flask import Flask, render_template
 import csv
 import random
-import os
 
 app = Flask(__name__)
 
