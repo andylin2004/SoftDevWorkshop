@@ -47,7 +47,7 @@ def job_decider_web():
     jobs = getOccupations()
     percentages = getPercentages()
     print(len(jobs))
-    return render_template("tablified.html", job = jobs, percentage = percentages, count = len(jobs), i = 0)
+    return render_template("tablified.html", job = jobs, percentage = percentages, count = len(jobs), result = makeChoice())
     
 if __name__ == "__main__":  
     app.debug = True       
