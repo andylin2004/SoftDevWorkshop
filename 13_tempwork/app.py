@@ -3,9 +3,10 @@
 #K12 --  making our own flask website that also relies on html from K11 and html template found in K12
 #2021-10-08
 
-from flask import Flask
+from flask import Flask, render_template
 import csv
 import random
+import os
 
 app = Flask(__name__)
 
@@ -18,7 +19,7 @@ def openFile(totalLine):
             #for first row in file, create key-value pair in info with format: 'Job Class': <xx>, 'Percentage': <yy>
             #key is 'Job Class'; value is 'Percentage'
             #for every other row, update existing key-value pair to include new value given
-            if row['Job Class'] != "Total" and not totalLine:
+            if totalLine or (not totalLine and row['Job Class'] != "Total"):
                 info[row['Job Class']] = float(row['Percentage'])
 
     return info;
@@ -44,11 +45,10 @@ def makeChoice():
 
 @app.route("/")
 def job_decider_web():
-    occupations = getOccupations()
-    occupationsString = ""
-    for occupation in occupations:
-        occupationsString += occupation+"<br>"
-    return "Hi-C: Yaying Liang Li, Andy Lin, Josephine Lee <br><br> Possible results:<br>"+occupationsString+"<br><br>"+"Occupation Chosen:<br><br>"+makeChoice()
+    jobs = getOccupations()
+    percentages = getPercentages()
+    print(len(jobs))
+    return render_template("tablified.html", job = jobs, percentage = percentages, count = len(jobs), i = 0)
     
 if __name__ == "__main__":  
     app.debug = True       
