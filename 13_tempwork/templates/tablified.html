@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+    <title>Tablified go brrrr</title>
+    <body>
+        <h2>A page to return results from that random job generator</h2>
+        Team TeamMAN: Andy Lin, Noakai Aronesty, Michael Borczuk
+        <table>
+            <tr>
+                <th>Job Occupation</th>
+                <th>Percentage</th>
+            </tr>
+            {% for i in range(count) %}
+                <tr>
+                    <th>
+                        {{job[i]}}
+                    </th>
+                    <th>
+                        {{percentage[i]}}
+                    </th>
+                </tr>
+        </table>
+    </body>
+</html>
