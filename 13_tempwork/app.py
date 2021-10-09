@@ -1,6 +1,6 @@
 #Team Name: TeamMAN: Andy Lin, Noakai Aronesty, Michael Borczuk
 #SoftDev
-#K12 --  making our own flask website that also relies on html from K11 and html template found in K12
+#K13 --  making our own flask website that also relies on html from K11 and html template found in K12
 #2021-10-08
 
 from flask import Flask, render_template
