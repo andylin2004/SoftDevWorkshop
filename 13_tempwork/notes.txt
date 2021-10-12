@@ -8,7 +8,10 @@ on the other hand, allows you to use primitive functions in the html template an
 
 Separating code into many funcs is good
 
-Somehow if we run the Python script when our terminal is in home directory or anywhere but under 13_tempwork, the Python script throws an exception saying that the csv file not found. The python script only finds the csv file if the terminal is at 13_tempwork. 
+Somehow if we run the Python script when our terminal is in home directory or anywhere but under 13_tempwork, the Python script throws an exception saying that
+the csv file not found. The python script only finds the csv file if the terminal is at 13_tempwork.
+However, there is a Python3.4+ hack where if you use use from pathlib import Path then Path(__file__).parent / [wherever the file you want to access is], then you
+can get the absolute path for the parent directory of the current Python file. This will enable you to use the python script anywhere outside of the folder the script is in. 
 
 EGO
 The practice of egoless programming is a good one; claiming ownership over code leads to a wounding of pride when errors are found. This impedes progress, as it is
