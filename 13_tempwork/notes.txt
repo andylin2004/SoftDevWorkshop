@@ -1,0 +1,16 @@
+Team Name: TeamMAN: Andy Lin, Noakai Aronesty, Michael Borczuk
+SoftDev
+K13 --  making our own flask website that also relies on html from K11 and html template found in K12
+2021-10-08
+
+The {{}} notation is used to  declare a variable in the html template, which can be defined in the app.py render_template() function from flask. The {%%} notation,
+on the other hand, allows you to use primitive functions in the html template and also define local variables to be used in those functions.
+
+Separating code into many funcs is good
+
+EGO
+The practice of egoless programming is a good one; claiming ownership over code leads to a wounding of pride when errors are found. This impedes progress, as it is
+better to just fix the errors and move on. A social environment is important in computer programming, because it improves each involved person's skills, and claiming
+ownership/not allowing people to double check code you have written destroys the environment.
+
+egoless programming = chill programmingo
