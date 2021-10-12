@@ -6,13 +6,14 @@
 from flask import Flask, render_template
 import csv
 import random
+from pathlib import Path
 
 app = Flask(__name__)
 
 def openFile(totalLine):
     info = {} #create new dict called info
     
-    with open('data/occupations.csv',mode='r') as csvfile: #open file for reading; we can refer to it as csvfile
+    with open(Path(__file__).parent / 'data/occupations.csv',mode='r') as csvfile: #open file for reading; we can refer to it as csvfile
         reader = csv.DictReader(csvfile) #reader is object of class csv
         for row in reader: #every row is a dict; format: {'Job Class': <xx>, 'Percentage': <yy>}
             #for first row in file, create key-value pair in info with format: 'Job Class': <xx>, 'Percentage': <yy>
