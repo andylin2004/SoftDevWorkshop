@@ -8,6 +8,8 @@ on the other hand, allows you to use primitive functions in the html template an
 
 Separating code into many funcs is good
 
+Somehow if we run the Python script when our terminal is in home directory or anywhere but under 13_tempwork, the Python script throws an exception saying that the csv file not found. The python script only finds the csv file if the terminal is at 13_tempwork. 
+
 EGO
 The practice of egoless programming is a good one; claiming ownership over code leads to a wounding of pride when errors are found. This impedes progress, as it is
 better to just fix the errors and move on. A social environment is important in computer programming, because it improves each involved person's skills, and claiming
