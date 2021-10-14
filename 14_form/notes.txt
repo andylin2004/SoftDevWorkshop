@@ -1,0 +1,5 @@
+<form action="/auth">: whenever the form is submitted, the first string appended to the URL is /auth
+      <input type="text" name="username">: the second string appended to the URL is text with the username given
+      <input type="submit" name="sub1">: this is sort of special because this is a button rendered by HTML. This is the third string appended to the URL: submit with sub1
+</form> 
+
