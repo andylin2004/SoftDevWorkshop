@@ -26,7 +26,7 @@ def authenticate():
     request_method = request.method
 
     #response to a form submission. passes down the username and method
-    return render_template('auth.html', username=username, method=request_method)
+    return render_template('response.html', username=username, method=request_method)
 
 
 if __name__ == "__main__": #false if this file imported as module
