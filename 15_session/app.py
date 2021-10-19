@@ -7,6 +7,7 @@ from flask import Flask             #facilitate flask webserving
 from flask import render_template   #facilitate jinja templating
 from flask import request           #facilitate form submission
 from flask import session           #facilitate user sessions
+from flask import redirect
 from os import urandom
 
 app = Flask(__name__)    #create Flask object
@@ -35,9 +36,14 @@ def authenticate():
                 #response to a person who has the right credentials and logs in
                 return render_template('response.html', username=username)
             else:
-                return render_template('login.html', error='password')
+                return render_template('login.html', error='password') #wrong pw
         else:
-            return render_template('login.html', error='username')
+            return render_template('login.html', error='username') #wrong user
+
+@app.route("/logout")
+def logout():
+    session.pop("username")
+    return redirect("/")
 
 if __name__ == "__main__": #false if this file imported as module
     app.secret_key = urandom(32) # randomized secret key
