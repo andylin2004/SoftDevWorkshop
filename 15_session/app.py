@@ -23,9 +23,9 @@ def authenticate():
     # The requests property contains the values property. The value property contains
     # data from both requests.args and requests.form. 
     
-    if request.method == "GET":
+    if request.method == "GET": #for when you refresh the website
         return disp_loginpage()
-    else:
+    else: #when you log in from /
         username = request.values['username'] 
         password = request.values['password']
 
