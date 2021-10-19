@@ -1,7 +1,7 @@
 # Team Name: Sleepy Programmers: Andy Lin, Shadman Rakib, Raymond Yeung
 # SoftDev
-# K14 -- Forms using Flask
-# 2021-10-14
+# K15 -- User sessions on website via Flask
+# 2021-10-18
 
 from flask import Flask             #facilitate flask webserving
 from flask import render_template   #facilitate jinja templating
