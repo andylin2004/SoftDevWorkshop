@@ -23,7 +23,7 @@ with open('students.csv', newline='') as studentcsv:
 
 c.execute("CREATE TABLE courses(code TEXT, mark INTEGER, id INTEGER)")
 
-with open('students.csv', newline='') as coursescsv:
+with open('courses.csv', newline='') as coursescsv:
     toRead = csv.DictReader(coursescsv)
     for course in toRead:
         c.execute("INSERT INTO courses VALUES (\""+course['code']+"\", "+course['mark']+", "+course['id']+")")
