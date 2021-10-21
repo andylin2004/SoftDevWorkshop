@@ -21,7 +21,12 @@ with open('students.csv', newline='') as studentcsv:
     for student in toRead:
         c.execute("INSERT INTO roster VALUES (\""+student['name']+"\", "+student['age']+", "+student['id']+")")
 
+c.execute("CREATE TABLE courses(code TEXT, mark INTEGER, id INTEGER)")
 
+with open('students.csv', newline='') as coursescsv:
+    toRead = csv.DictReader(coursescsv)
+    for course in toRead:
+        c.execute("INSERT INTO courses VALUES (\""+course['code']+"\", "+course['mark']+", "+course['id']+")")
 
 command = ""          # test SQL stmt in sqlite3 shell, save as string
 c.execute(command)    # run SQL statement
