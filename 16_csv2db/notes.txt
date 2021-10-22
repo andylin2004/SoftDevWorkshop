@@ -1,3 +1,8 @@
+Team Name: Sleepy Programmers: Andy Lin, Shadman Rakib, Raymond Yeung
+SoftDev
+K16 -- Creating and adding to a SQLite database via Python
+2021-10-20
+
 Relational database
  
 DB that stores information as a collection of tables.
