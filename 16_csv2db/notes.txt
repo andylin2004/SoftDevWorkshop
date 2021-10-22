@@ -37,6 +37,8 @@ CREATE TABLE
   Add a table to a database 
 eg,   
 CREATE TABLE <name> (<column name> <data type>, ...)
+
+We found out the hard way that you can't overwrite a table by making a new table with the same name. Delete go brrrr.
    
 data type will help to convert entered values to a suggested type.
 
@@ -77,7 +79,7 @@ CREATE TABLE tpotusa
  INSERT INTO tpotusa VALUES ("guitbass", 1);
  INSERT INTO tpotusa VALUES ("drums", 0);
 
-
+One thing to not forget: \ to force Python to treat " as a regular char and not end string char.
 
 
 
@@ -101,7 +103,7 @@ SELECT name FROM tpotusa;
 eg,
 SELECT name FROM tpotusa WHERE id = 0;
 
-
+This is a good thing to use for when testing to see if we messed up or not.
 
 
 SQLite shell is your friend.
@@ -119,6 +121,7 @@ shell cmds begin with a dot
 
 some useful SQLITE Shell commands:
   .quit
+  although you could just ctrl d this
   .tables
   .header on|off
   .mode column|csv|list|html|insert|line|tabs
