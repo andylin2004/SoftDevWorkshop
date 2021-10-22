@@ -15,6 +15,7 @@ c = db.cursor()               #facilitate db ops -- you will use cursor to trigg
 #==========================================================
 
 c.execute("CREATE TABLE roster(name TEXT, age INTEGER, userid INTEGER)") # create student table in database
+# formatting: string name, int age, int userid
 
 with open('students.csv', newline='') as studentcsv:
     toRead = csv.DictReader(studentcsv)
@@ -23,6 +24,7 @@ with open('students.csv', newline='') as studentcsv:
         # for each row in csv, insert the row data into the data (same order as original table)
         # also first row gets ignored as they are the headers
 c.execute("CREATE TABLE courses(code TEXT, mark INTEGER, id INTEGER)")
+# formatting: string code, int mark, int id
 
 with open('courses.csv', newline='') as coursescsv: # create course table in database
     toRead = csv.DictReader(coursescsv)
