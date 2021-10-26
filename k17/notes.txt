@@ -1,0 +1,13 @@
+Team Name: Sleepy Programmers: Andy Lin, Shadman Rakib, Raymond Yeung
+SoftDev
+K17 -- Notes for wiki site project and from classwork
+2021-10-25
+
+Notes:
+-If not exists (avoids error in creating a table that already exists) so the database doesn't need to be deleted every time we run the code
+-Checking if table has content (.fetchall() == 0)
+-printing via fetchall (c.fetchall()= var. Then iterate through var to print.
+-try and except
+-sqlite.integrity error (error for duplicates)
+-\ space allows for code to be continued on newline.
+-? can substitute for vars for the sqlite insertion.
