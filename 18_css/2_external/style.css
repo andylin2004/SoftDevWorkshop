@@ -1,0 +1,47 @@
+html{
+    background-color: dimgray;
+  }
+  body{
+    background-color: gray;
+  }
+  h1{
+    background-color:lightgray;
+    color:white;
+    font-family:sans-serif;
+    text-align: center;
+  }
+  h2{
+    font-family: sans-serif;
+  }
+  h3{
+    font-family: sans-serif;
+  }
+  ul{
+    font-family: sans-serif;
+    list-style-type: none;
+    padding-left: 0;
+  }
+  p{
+    font-family: sans-serif;
+  }
+  a{
+    color:white; 
+    text-decoration: none;
+  }
+  footer{
+    background-color:#4b4b4b;
+    padding:10px;
+    text-align: end;
+    color:gray;
+    font-family: sans-serif;
+  }
+  .site-formatter{
+    display:flex;
+  }
+  .sidebar{
+    position:relative;
+    flex:1;
+  }
+  .main{
+    flex:4;
+  }
