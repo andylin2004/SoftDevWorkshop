@@ -1,3 +1,9 @@
+# Gotta Go Fast - Andy Lin, Mark Zhu
+# SoftDev
+# K19 -- grabbing API result and implementing it into a Flask site
+# 2021-11-23
+# time spent: 0.6
+
 from flask import Flask             #facilitate flask webserving
 from flask import render_template   #facilitate jinja templating
 import urllib.request
