@@ -31,3 +31,5 @@ element type (or class name when using . in front of class name){
 internal style sheet - enclose css in <style> tags
 
 external style sheet - use <link rel="stylesheet" type="text/css" href="stylesheet file">, the internal stylesheet style can be copypastaed into the stylesheet file
+
+ipsum used: Pokém Ipsum
