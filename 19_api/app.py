@@ -1,6 +1,7 @@
 from flask import Flask             #facilitate flask webserving
 from flask import render_template   #facilitate jinja templating
 import urllib.request
+import json
 
 app = Flask(__name__)    #create Flask object
 
@@ -9,7 +10,8 @@ app = Flask(__name__)    #create Flask object
 def disp_loginpage():
     apiKey = open('key_nasa.txt', 'r').readline()
     url = "https://api.nasa.gov/planetary/apod?api_key="+apiKey
-    data = urllib.request.urlopen(url)
+    siteData = urllib.request.urlopen(url)
+    data = json.load(siteData)
     return render_template( 'main.html' ) # Render the login template
 
 
