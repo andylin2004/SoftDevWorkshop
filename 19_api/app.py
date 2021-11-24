@@ -12,7 +12,7 @@ def disp_loginpage():
     url = "https://api.nasa.gov/planetary/apod?api_key="+apiKey
     siteData = urllib.request.urlopen(url)
     data = json.load(siteData)
-    return render_template( 'main.html' ) # Render the login template
+    return render_template( 'main.html', img=data['url'], title=data['title'], desc=data['explanation'] ) # Render the login template
 
 
 if __name__ == "__main__": #false if this file imported as module
