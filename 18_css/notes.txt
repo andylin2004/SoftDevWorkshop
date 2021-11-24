@@ -1,0 +1,33 @@
+Gotta Go Fast - Andy Lin, Mark Zhu
+SoftDev
+K18 -- CSS basics notes
+2021-11-22 
+time spent: 2
+
+divs--very helpful in order to group out some html elements so you can apply a css effect on all child html of divs
+
+styles inline--just use style param (eg style="whatever style here")
+
+style formatting:
+
+category: setting; (the ; is very important)
+
+font-family dictates the type of font to use (eg sans-serif)
+
+set website background color by setting background color in the html tag
+set child background color by setting background color in the body tag
+you can use a hex color code for the colors
+flex allows you to have two website elements side by side, provided they are grouped in a div with style display:flex and the child elements has flex (eg flex:1) with how many portions on the display (part/whole)
+headers by default have a margin
+
+you can have a class name for a html element by using class="classname"
+
+style sheet syntax:
+
+element type (or class name when using . in front of class name){
+    styles here;
+}
+
+internal style sheet - enclose css in <style> tags
+
+external style sheet - use <link rel="stylesheet" type="text/css" href="stylesheet file">, the internal stylesheet style can be copypastaed into the stylesheet file
