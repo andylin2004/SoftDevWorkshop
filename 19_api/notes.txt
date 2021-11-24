@@ -1,0 +1,14 @@
+Gotta Go Fast - Andy Lin, Mark Zhu
+SoftDev
+K19 -- grabbing API result and implementing it into a Flask site
+2021-11-23
+time spent: 0.6
+
+<img> tags:
+
+required param: src, which takes in a string containing the path to an image.
+
+parsing json from url:
+
+import json library, then use json.load([url open link here])
+you can get the url open link here by importing urllib.request and then have a var for the url open link here set to urllib.request.urlopen([url to get json from])
