@@ -3,3 +3,9 @@ SoftDev
 K22 - notes on Foundation framework
 2021-11-29
 time spent: 
+
+turns out you can combine classes together within a html element (just use spaces between different css classes to use)
+foundation has a class where you can literally shame people for using internet explorer 10, the worst browser out there (and a cool class for hiding or showing things based on if you're in dark or light mode!)
+the grid-x example in the framework doc is a bit broken--it supposed to have a blue background in the example, but this does not show up when I was testing this feature. a workaround is to use primary callout.
+elements inside a div with grid-x must use a div with the cell class
+there are four button css styles to choose from in foundation: success button, alert button, secondary button, and success button. css effects are applied all links by default.

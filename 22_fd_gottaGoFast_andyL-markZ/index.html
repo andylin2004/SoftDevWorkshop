@@ -8,9 +8,11 @@ time spent:  -->
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="css/foundation.css">
+        <link rel="stylesheet" type="text/css" href="css/app.css">
+        <link rel="stylesheet" type="text/css" href="css/foundation.min.css">
     </head>
     <body>
-        Different button styles
+        <h1>Different button styles</h1>
         <br>
         <a href="">Normie link</a>
         <br>
@@ -21,5 +23,19 @@ time spent:  -->
         <a href="" class="alert button">Alert button using alert button class</a>
         <br>
         <a href="" class="secondary button">Secondary button using the secondary button class</a>
+        <br>
+        <h1>Make a clean bar in HTML via Foundation! (but use "primary callout" class in addition to in order to get some colors going--Foundation is broken in this regard)</h1>
+        <div class="grid-x">
+            <div class="cell primary callout">bottom bar that takes over the width of the page</div>
+            <div class="cell primary callout">bottom bar that takes over the width of the page, but different color</div>
+        </div>
+        <div class="grid-x">
+            <div class="cell primary callout small-6">bottom bar that takes over the width of the pager</div>
+            <div class="cell primary callout small-6">bottom bar that takes over the width of the pager, but different color</div>
+        </div>
+        <br>
+        <h1>dark and light mode handling</h1>
+        <p class="show-for-dark-mode">hehe, im in the dark! show me by using show-for-dark-mode!</p>
+        <p class="hide-for-dark-mode">hehe, im in the light! im gonna burn up! show me by using hide-for-dark-mode!</p>
     </body>
 </html>
