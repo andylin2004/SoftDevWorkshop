@@ -19,3 +19,4 @@ QCC
 Q0 (Did you have to consult resources beyond your Devo-generated on-ramp? If so, cite all – including verbal consultations.)
 No.
 Q1 (only to be answered after you have finished… At this point, which front-end framework do you prefer, and why?)
+For development, I prefer Foundation because of how it feels less verbose--you don't have to repeat the overlying class name for applying a class subset to a html element (eg for list-group with the flush style, you have to repeat list-group then - then flush in order to apply the flush style, which is annoying). However, from a looks standpoint, I prefer Bootstrap, as I find that the UI elements tend to be more rounded, which reflects the current design trends as seen on macOS and Windows.
