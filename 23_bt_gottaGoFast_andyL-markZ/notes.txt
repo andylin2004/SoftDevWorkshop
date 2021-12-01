@@ -1,0 +1,21 @@
+Gotta Go Fast - Andy Lin, Mark Zhu
+SoftDev
+K23 - making a webpage using Bootstrap
+2021-12-01
+time spent:
+
+DISCO
+Interesting that the website ends up using the system font (website font looks like the default one on Apple devices)
+There is an alert class that can be combined with a type of alert (such as alert-danger) as a class in order to make a good alert notification
+Tables look very fancy in bootstrap
+table is a html tag that contains table elements
+thead is a html tag that contains the first row of the table 
+tbody is a html tag that contains the rest of the table
+tr is used to make a new table row
+th is used to add a table element text that is bolded
+td is used to add a normal table element
+you can style a table with table and table-striped classes in bootstrap in order to make a table have a striped appearance
+QCC
+Q0 (Did you have to consult resources beyond your Devo-generated on-ramp? If so, cite all – including verbal consultations.)
+No.
+Q1 (only to be answered after you have finished… At this point, which front-end framework do you prefer, and why?)
