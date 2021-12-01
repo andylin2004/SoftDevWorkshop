@@ -2,7 +2,7 @@ Gotta Go Fast - Andy Lin, Mark Zhu
 SoftDev
 K22 - notes on Foundation framework
 2021-11-29
-time spent: 
+time spent: 2
 
 turns out you can combine classes together within a html element (just use spaces between different css classes to use)
 foundation has a class where you can literally shame people for using internet explorer 10, the worst browser out there (and a cool class for hiding or showing things based on if you're in dark or light mode!)
