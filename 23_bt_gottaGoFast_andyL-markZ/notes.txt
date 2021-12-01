@@ -14,6 +14,9 @@ tbody is a html tag that contains the rest of the table
 tr is used to make a new table row
 th is used to add a table element text that is bolded
 td is used to add a normal table element
+there is a list-group class for the ul html tag, in order for the whole setup to work, you must ensure that any child li html elements have the list-group-item class in.
+active class with the list-group-item class in the li tag will allow you to make the background blue, disabled class with the list-group-item class will make the text grey
+list-group-flush will allow you to kill the rounded corners in a list-group
 you can style a table with table and table-striped classes in bootstrap in order to make a table have a striped appearance
 QCC
 Q0 (Did you have to consult resources beyond your Devo-generated on-ramp? If so, cite all – including verbal consultations.)
