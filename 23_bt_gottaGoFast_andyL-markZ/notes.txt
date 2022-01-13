@@ -2,7 +2,7 @@ Gotta Go Fast - Andy Lin, Mark Zhu
 SoftDev
 K23 - making a webpage using Bootstrap
 2021-12-01
-time spent:
+time spent: 2
 
 DISCO
 Interesting that the website ends up using the system font (website font looks like the default one on Apple devices)
