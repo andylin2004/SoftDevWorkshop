@@ -2,7 +2,7 @@ Remarkable Divers - Andy Lin, Qina Liu, Roshani S
 SoftDev
 K24 - notes on setting up a LAMP server
 2022-01-13
-time spent: 0.6
+time spent: 1
 
 Great guides on making a 20.04 droplet:
 
