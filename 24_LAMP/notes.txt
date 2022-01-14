@@ -9,14 +9,25 @@ Great guides on making a 20.04 droplet:
 https://www.digitalocean.com/community/tutorials/how-to-set-up-an-ubuntu-20-04-server-on-a-digitalocean-droplet
 
 tldr press create then droplet then use the cheapest option, dont add any add ons, use ssh key that is on your system, use the closest server to us
-Good guide on getting SSH keys back: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys
 
-if you want to access the droplet via a terminal, ssh as root to your ipv4 address and say yes for the fingerprint and you should be in
+Good guide on getting SSH keys back: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys
 
 great article on setting apache2 up: https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-20-04
 
-if you need to add more ssh keys after the fact: hhttps://docs.digitalocean.com/products/droplets/how-to/add-ssh-keys/to-existing-droplet/
+if you need to add more ssh keys after the fact: https://docs.digitalocean.com/products/droplets/how-to/add-ssh-keys/to-existing-droplet/
 
 how to have both god and anime (i meant sshkeys and password) on your side: https://www.digitalocean.com/community/questions/enable-both-password-and-key-file-to-ssh-logon-in
+aka ssh in and do sudo nano /etc/ssh/sshd_config then change PasswordAuthentication no to PasswordAuthentication yes and save
 
 add ssh key to your own user account: https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04#step-2-—-copying-the-public-key-to-your-ubuntu-server
+
+things to install for mykolyk's lamp setup:
+
+python3
+apache2
+sqlite3
+also reminder to use sudo apt update to get updated package info
+
+nuke all access to the root account via ssh by sudo nano /etc/ssh/sshd_config and change PermitRootLogin yes to PermitRootLogin no and save
+
+how to make a new sudo user: https://www.digitalocean.com/community/tutorials/how-to-create-a-new-sudo-enabled-user-on-ubuntu-20-04-quickstart
