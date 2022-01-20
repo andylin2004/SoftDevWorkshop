@@ -1,8 +1,10 @@
-Remarkable Divers - Andy Lin, Qina Liu, Roshani S
+<!-- Remarkable Divers - Andy Lin, Qina Liu, Roshani S
 SoftDev
 K24 - notes on setting up a LAMP server
 2022-01-13
-time spent: 1
+time spent: 1 -->
+
+# 24_LAMP: resources on creating an ubuntu droplet
 
 Great guides on making a 20.04 droplet:
 
