@@ -74,4 +74,6 @@ how to make apache2 serve up a flask app
 11. maybe restart via sudo service apache2 restart 
 12. if you want to test, do sudo ufw allow 5000 and run the flask app script in the created venv and load up the site via the ip address:5000
 
+(you should really have flask in the global python instance because apache2 is lame)
+
 source: room 5's instructions and https://github.com/ElizaKnapp/workshop-repo/blob/main/25_flask-apache/README.md (via https://pythonforundergradengineers.com/flask-app-on-digital-ocean.html and https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps)
