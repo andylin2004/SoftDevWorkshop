@@ -1,95 +1,120 @@
-<!-- Remarkable Divers - Andy Lin, Qina Liu, Roshani S
+# how-to :: Deploy Flask Application on an Ubuntu VPS
+---
+## Overview
+- deploy flask app on our DO servers
 
-SoftDev
+### Estimated Time Cost: _
 
-K25 - making Apache2 serve a flask app
+### Prerequisites:
+- have a Digital Ocean Droplet with Apache2 
 
-2022-01-19
+1. Install mod_wsgi (python3 version)
+```
+$ sudo apt-get install libapache2-mod-wsgi-py3 python-dev
+```
+2. Enable mod_wsgi
+```
+$ sudo a2enmod wsgi
+```
+3. Creating Flask App
+```
+$ cd /var/www
+$ sudo mkdir FlaskApp
+$ cd FlaskApp
+$ sudo mkdir FlaskApp
+$ cd FlaskApp
+```
+4. Get Your Python Code
+- either create __init__.py, git clone a repo, or scp a __init__.py file 
+5. Install Flask
+```
+$ sudo apt-get install python3-pip
+$ sudo apt-get install python3-venv
+$ python3 -m venv ~/venv
+$ source venv/bin/activate
+$ sudo pip3 install Flask
+```
+- test if installation is successful: `$ sudo python3 __init__.py`
+- should display "Running on http://127.0.0.1:5000/"; if so success!
+```
+$ deactivate
+```
+6. Configure and Enable a New Virtual Host
+```
+$ sudo nano /etc/apache2/sites-available/FlaskApp.conf 
+```
+- write this in the file: 
+```
+<VirtualHost *:80>
+		ServerName [DO IP address]
+		ServerAdmin user@[DO IP address]
+        WSGIScriptAlias / /var/www/FlaskApp/FlaskApp.wsgi
+		<Directory /var/www/FlaskApp/FlaskApp/>
+			Order allow,deny
+			Allow from all
+		</Directory>
+		Alias /static /var/www/FlaskApp/FlaskApp/static
+		<Directory /var/www/FlaskApp/FlaskApp/static/>
+			Order allow,deny
+			Allow from all
+		</Directory>
+		ErrorLog ${APACHE_LOG_DIR}/error.log
+		LogLevel warn
+		CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+```
+- enable virtual host:
+```
+$ sudo a2ensite FlaskApp
+$ systemctl reload apache2
 
-time spent: 5 -->
+(to be save)
+$ sudo a2ensite FlaskApp
+```
+7. Create .wsgi File
+```
+$ cd /var/www/FlaskApp/
+$ sudo nano FlaskApp.wsgi
+```
+- write this in the file:
+```
+#!/usr/bin/python
+import sys
+import logging
+logging.basicConfig(stream=sys.stderr)
+sys.path.insert(0,"/var/www/FlaskApp/")
 
-# 25_flask-apache: how to make apache2 serve a flask app
+from FlaskApp import app as application
+application.secret_key = 'Add your secret key'
+```
+- restart apache: `$ sudo service apache2 restart`
+8. Change directory owner and group
+`$ sudo chown -R www-data:www-data/var/www/FlaskApp/FlaskApp`
+- Allow the group to write to directory with appropriate permissions
+`$ sudo chmod -R 775 /var/www/FlaskApp/FlaskApp`
+- Add user to the www-data group
+`$ sudo usermod -a -G www-data user`
+- logout (exit) and login again
+- Check by running `$ ls -al blog within /var/www/FlaskApp/FlaskApp`
+    - got `-rwxrwxr-x 1 www-data www-data  136 Jan 20 01:56 __init__.py`
+- restart apache: `$ sudo service apache2 restart`
 
-if wsgi is missing:
+Server Error log can be found at `/var/log/apache2` in the error.log file 
+- root access is needed to cd into the apache2 folder and to access its files
 
-`sudo apt-install libapache2-mod-wsgi`
-then `sudo a2enmod wsgi`, `sudo systemctl restart apache2`
-verify with `sudo apache2ctl -t -D DUMP_MODULES`
 
-super important: apache2 will only serve up flask apps when the main script file is named `__init__.py`
+1. Step, with [hyperlink](https://xkcd.com)s...
 
-mv can be used to rename files as well (just use mv [original name] [new name])
-how to make apache2 serve up a flask app
 
-1. enable wgsi via `sudo apt-get install libapache2-mod-wsgi-py3 python-dev` and `sudo a2enmod wsgi`
-2. set up the filesystem for the flask app:
-    ```bash
-    cd /var/www
-    sudo mkdir FlaskApp (or something else)
-    cd FlaskApp
-    sudo mkdir FlaskApp
-    ```
-    [during this step, get the contents of project you want to serve up over to the current directory]
-    (you may also need to modify app.run to say `app.run(host='0.0.0.0'))`
-3. install flask via `sudo apt-get install python3-pip` and `sudo pip3 install virtualenv`
-4. create a new virtual environment in the created FlaskApp directory via `python3 -m venv [where you want the venv to be and the name at the end]` and activate it
-5. install flask in the virtual environment and verify to see if it works
-6. create virtual host file via `sudo nano /etc/apache2/sites-available/[the name you want to call it].conf`
-    paste this whole thing:
-    ```xml
-    <VirtualHost *:80>
-        ServerName mywebsite.com
-        ServerAdmin admin@mywebsite.com
-        WSGIScriptAlias / /var/www/FlaskApp/flaskapp.wsgi
-        <Directory /var/www/FlaskApp/FlaskApp/>
-            Order allow,deny
-            Allow from all
-        </Directory>
-        Alias /static /var/www/FlaskApp/FlaskApp/static
-        <Directory /var/www/FlaskApp/FlaskApp/static/>
-            Order allow,deny
-            Allow from all
-        </Directory>
-        ErrorLog ${APACHE_LOG_DIR}/error.log
-        LogLevel warn
-        CustomLog ${APACHE_LOG_DIR}/access.log combined
-    </VirtualHost>
-    ```
-    (you can also get away with changing mywebsite to the ip address and change the parent flaskapp directory name to something else, but match it to the mkdir name from earlier)
-7. enable virtual host by `sudo a2ensite [conf name]`
-8. create wsgi file via `cd /var/www/FlaskApp` (for last part, or the name you made in mkdir) and `sudo nano flaskapp.wsgi`
-    paste this in:
-    ```python
-    #!/usr/bin/python
-    import sys
-    import logging
-    logging.basicConfig(stream=sys.stderr)
-    sys.path.insert(0,"/var/www/FlaskApp/")
+### Resources
+* [Digital Ocean Guide](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps)
+* Room 5:
 
-    from FlaskApp import app as application
-    application.secret_key = 'Add your secret key'
-    ```
-9. apt-get time:
-    ```bash
-    $ sudo apt-get update
-    $ sudo apt-get upgrade
-    $ sudo apt-get install python3-pip
-    $ sudo apt-get install python3-dev
-    $ sudo apt-get install python3-setuptools
-    $ sudo apt-get install python3-venv
-    $ sudo apt-get install build-essential libssl-dev libffi-dev
-    $ sudo apt-get install libapache2-mod-wsgi-py3
-    ```
-10. more packages time:
-    ```bash
-    $ pip install wheel 
-    $ pip install flask
-    $ pip install uwsgi
-    $ pip install requests
-    ```
-11. maybe restart via `sudo service apache2 restart`
-12. if you want to test, do `sudo ufw allow 5000` and run the flask app script in the created venv and load up the site via the ip address:5000
+---
 
-(you should really have flask in the global python instance because apache2 is lame)
+Accurate as of (last update): 2021-01-19
 
-source: room 5's instructions and https://github.com/ElizaKnapp/workshop-repo/blob/main/25_flask-apache/README.md (via https://pythonforundergradengineers.com/flask-app-on-digital-ocean.html and https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps)
+#### Contributors:  
+Andy Lin, pd2  
+Roshani Shrestha, pd2  
+Qina Liu, pd2  
