@@ -1,18 +1,22 @@
-Team Phantom Tollbooth :: Clyde Sinclair, Fierce Dragon
-SoftDev pd0
+Team Doorstuck :: Eric Guo, Andy Lin
+SoftDev pd2
 K27 -- Basic functions in JavaScript
-2022-02-03r
+2022-02-04
 
 DISCO
 -----------------------------------------------------------------
-* Ooooh, ___
-* Aaah-haa!  ____...
+* Ooooh, no classes makes this less annoying
+* Aaah-haa!  Simple was the key
+* functions defined very differently than both scheme and Java
+* var + fnctnm = (args) =>
+* infix over prefix notation
 =================================================================
 
 QCC
 -----------------------------------------------------------------
-* Why...?
-* Huh?
-* Whuh now?
+* what is the point of the arrow or the equal sign?
+* return statements needed? why?
+* Why the console in that way over a main?
+* why console.log over print statement? 
 =================================================================
 
