@@ -51,4 +51,4 @@ let gcd = (a, b) => {
 
 let y = factorial(5);
 console.log(y);
-console.log(gcd(20,40))
+console.log(gcd(20, 40));
