@@ -10,23 +10,44 @@
 // implement a fact and fib fxn
 
 
-  var fib = (n) => {
-      if(n == 0) {
-          return 0;
-      } else if(n <= 2) {
-          return 1;
-      } else {
-          return fib(n - 1) + fib(n - 2);
-      }
-  }
+let fib = (n) => {
+    if(n == 0) {
+        return 0;
+    } else if(n <= 2) {
+        return 1;
+    } else {
+        return fib(n - 1) + fib(n - 2);
+    }
+}
 
-  var factorial = (n) => {
-      if (n == 0) {
-          return 1;
-      } else {
-          return factorial(n - 1) * n;
-      }
-  }
+let factorial = (n) => {
+    if (n == 0) {
+        return 1;
+    } else {
+        return factorial(n - 1) * n;
+    }
+}
 
-  var y = factorial(5);
-  console.log(y);
+let gcd = (a, b) => {
+    gcdNum;
+    if (a > b) {
+        for (i = 2; i <= b; i++){
+            if (a % i == 0 && b % i == 0) {
+                gcdNum = i
+            }
+        }
+        return gcdNum
+    } else if (a == b) {
+        return a;
+    } else {
+        for (i = 2; i <= a; i++){
+            if (a % i == 0 && b % i == 0) {
+                gcdNum = i
+            }
+        }
+    }
+}
+
+let y = factorial(5);
+console.log(y);
+console.log(gcdNum(20,40))
