@@ -29,7 +29,7 @@ let factorial = (n) => {
 }
 
 let gcd = (a, b) => {
-    gcdNum;
+    let gcdNum;
     if (a > b) {
         for (i = 2; i <= b; i++){
             if (a % i == 0 && b % i == 0) {
@@ -45,6 +45,7 @@ let gcd = (a, b) => {
                 gcdNum = i
             }
         }
+        return gcdNum;
     }
 }
 
