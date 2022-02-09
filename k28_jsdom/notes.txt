@@ -1,0 +1,12 @@
+Team Doorstuck :: Eric Guo, Andy Lin
+SoftDev pd2
+K28 -- Getting more comfortable with the dev console and the DOM
+2022-02-08
+
+Turns out, its very hard to manipulate the page from the body of the page (unless you have a id assigned to that)
+You can dig through the DOM with getElementsByTagName or getElementById on document (which are indexable if you want to remove something)
+You can use classList.add() to add the class of a item, but only if there wasn't one before
+you can remove elements with .remove(), and add with .appendChild (on a indexable thing like lists)
+.createElement allows you to create a html element of type specified in param, but this is not committed until appendchild is use
+you can OOP and prefill things in? why would you want to do this?
+you can use .toString just like in java to convert int to strings
