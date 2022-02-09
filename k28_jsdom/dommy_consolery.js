@@ -18,10 +18,10 @@
    (delete this block comment once you are done)
 */
 
-// Team Phantom Tollbooth :: Clyde Sinclair, Fierce Dragon 
-// SoftDev pd0
+// Team Doorstuck :: Eric Guo, Andy Lin
+// SoftDev pd2
 // K28 -- Getting more comfortable with the dev console and the DOM
-// 2022-02-08t
+// 2022-02-08
 // --------------------------------------------------
 
 
@@ -50,18 +50,18 @@ var o = { 'name' : 'Thluffy',
           }
         };
 
-
+//seems like document is already ready to be used at the start, as a global var
 var addItem = function(text) {
   var list = document.getElementById("thelist");
   var newitem = document.createElement("li");
   newitem.innerHTML = text;
-  list.appendChild(newitem);
+  list.appendChild(newitem); // ooh oop but the objects are html elements! smells like beautifulsoup but better
 };
 
 
 var removeItem = function(n) {
   var listitems = document.getElementsByTagName('li');
-  listitems[n].remove();
+  listitems[n].remove(); // more oop things
 };
 
 
@@ -84,7 +84,41 @@ var stripe = function() {
   }
 };
 
-//insert your implementations here for...
-// FIB
-// FAC
-// GCD
+let fib = (n) => {
+  if(n == 0) {
+      return 0;
+  } else if(n <= 2) {
+      return 1;
+  } else {
+      return fib(n - 1) + fib(n - 2);
+  }
+}
+
+let factorial = (n) => {
+  if (n == 0) {
+      return 1;
+  } else {
+      return factorial(n - 1) * n;
+  }
+}
+
+let gcd = (a, b) => {
+  let gcdNum;
+  if (a > b) {
+      for (i = 2; i <= b; i++){
+          if (a % i == 0 && b % i == 0) {
+              gcdNum = i
+          }
+      }
+      return gcdNum
+  } else if (a == b) {
+      return a;
+  } else {
+      for (i = 2; i <= a; i++){
+          if (a % i == 0 && b % i == 0) {
+              gcdNum = i
+          }
+      }
+      return gcdNum;
+  }
+}
