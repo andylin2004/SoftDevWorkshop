@@ -48,7 +48,7 @@ var o = { 'name' : 'Thluffy',
           func : function(x) {
             return x+30;
           }
-        };
+};
 
 //seems like document is already ready to be used at the start, as a global var
 var addItem = function(text) {
