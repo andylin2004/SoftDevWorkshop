@@ -29,19 +29,19 @@
 //(Ctrl-Shift-K in Firefox to reveal console)
 console.log("AYO");
 
-var i = "hello";
-var j = 20;
+let i = "hello";
+let j = 20;
 
 
-//assign an anonymous fxn to a var
-var f = function(x) {
-  var j=30;
+//assign an anonymous fxn to a let
+let f = function(x) {
+  let j=30;
   return j+x;
 };
 
 
 //instantiate an object
-var o = { 'name' : 'Thluffy',
+let o = { 'name' : 'Thluffy',
           age : 15,
           items : [10, 20, 30, 40],
           morestuff : {a : 1, b : 'ayo'},
@@ -50,30 +50,30 @@ var o = { 'name' : 'Thluffy',
           }
 };
 
-//seems like document is already ready to be used at the start, as a global var
-var addItem = function(text) {
-  var list = document.getElementById("thelist");
-  var newitem = document.createElement("li");
+//seems like document is already ready to be used at the start, as a global let
+let addItem = function(text) {
+  let list = document.getElementById("thelist");
+  let newitem = document.createElement("li");
   newitem.innerHTML = text;
   list.appendChild(newitem); // ooh oop but the objects are html elements! smells like beautifulsoup but better
 };
 
 
-var removeItem = function(n) {
-  var listitems = document.getElementsByTagName('li');
+let removeItem = function(n) {
+  let listitems = document.getElementsByTagName('li');
   listitems[n].remove(); // more oop things, this time removing things
 };
 
-var red = function() {
-  var items = document.getElementsByTagName("li");
-  for(var i = 0; i < items.length; i++) {
+let red = function() {
+  let items = document.getElementsByTagName("li");
+  for(let i = 0; i < items.length; i++) {
     items[i].classList.add('red'); // makes html elements not red yet red
   }
 };
 
-var stripe = function() {
-  var items = document.getElementsByTagName("li");
-  for(var i = 0; i < items.length; i++) {
+let stripe = function() {
+  let items = document.getElementsByTagName("li");
+  for(let i = 0; i < items.length; i++) {
     if (i%2==0){
       items[i].classList.add('red');
     } else {
