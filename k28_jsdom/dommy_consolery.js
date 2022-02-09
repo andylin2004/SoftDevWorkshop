@@ -61,17 +61,15 @@ var addItem = function(text) {
 
 var removeItem = function(n) {
   var listitems = document.getElementsByTagName('li');
-  listitems[n].remove(); // more oop things
+  listitems[n].remove(); // more oop things, this time removing things
 };
-
 
 var red = function() {
   var items = document.getElementsByTagName("li");
   for(var i = 0; i < items.length; i++) {
-    items[i].classList.add('red');
+    items[i].classList.add('red'); // makes html elements not red yet red
   }
 };
-
 
 var stripe = function() {
   var items = document.getElementsByTagName("li");
@@ -79,27 +77,31 @@ var stripe = function() {
     if (i%2==0){
       items[i].classList.add('red');
     } else {
-      items[i].classList.add('blue');
+      items[i].classList.add('blue'); //same as before, but alts between red and blue unless color already assigned
     }
   }
 };
 
 let fib = (n) => {
-  if(n == 0) {
-      return 0;
-  } else if(n <= 2) {
-      return 1;
-  } else {
-      return fib(n - 1) + fib(n - 2);
+  let left = 0, right = 1;
+  if (n == 0) {
+    return left;
   }
+  for (let i = 1; i < n; i++){
+    let newRight = left + right;
+    left = right;
+    right = newRight;
+  }
+  return right
 }
 
 let factorial = (n) => {
-  if (n == 0) {
-      return 1;
-  } else {
-      return factorial(n - 1) * n;
+  let total = 1;
+  while (n > 1) {
+    total *= n;
+    n--;
   }
+  return total;
 }
 
 let gcd = (a, b) => {
@@ -122,3 +124,7 @@ let gcd = (a, b) => {
       return gcdNum;
   }
 }
+
+addItem(gcd(40, 60).toString())
+addItem(factorial(69).toString())
+addItem(fib(69).toString())
