@@ -10,3 +10,4 @@ you can remove elements with .remove(), and add with .appendChild (on a indexabl
 .createElement allows you to create a html element of type specified in param, but this is not committed until appendchild is use
 you can OOP and prefill things in? why would you want to do this?
 you can use .toString just like in java to convert int to strings
+getElementsByTagName require you to index it in order to append anything, which is a pain if you expected something to only have one instance (like a body)
