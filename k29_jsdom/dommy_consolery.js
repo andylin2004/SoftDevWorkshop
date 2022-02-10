@@ -18,10 +18,10 @@
    (delete this block comment once you are done)
 */
 
-// Team Doorstuck :: Eric Guo, Andy Lin
+// Team M1Gang: Andy Lin, Theo Fahey
 // SoftDev pd2
-// K28 -- Getting more comfortable with the dev console and the DOM
-// 2022-02-08
+// K29 -- Using JS with DOM to change the properties of a html element
+// 2022-02-09
 // --------------------------------------------------
 
 

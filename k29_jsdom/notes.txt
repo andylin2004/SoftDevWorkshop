@@ -1,13 +1,11 @@
-Team Doorstuck :: Eric Guo, Andy Lin
+Team M1Gang: Andy Lin, Theo Fahey
 SoftDev pd2
-K28 -- Getting more comfortable with the dev console and the DOM
-2022-02-08
+K29 -- Using JS with DOM to change the properties of a html element
+2022-02-09
 
-Turns out, its very hard to manipulate the page from the body of the page (unless you have a id assigned to that)
-You can dig through the DOM with getElementsByTagName or getElementById on document (which are indexable if you want to remove something)
-You can use classList.add() to add the class of a item, but only if there wasn't one before
-you can remove elements with .remove(), and add with .appendChild (on a indexable thing like lists)
-.createElement allows you to create a html element of type specified in param, but this is not committed until appendchild is use
-you can OOP and prefill things in? why would you want to do this?
-you can use .toString just like in java to convert int to strings
-getElementsByTagName require you to index it in order to append anything, which is a pain if you expected something to only have one instance (like a body)
+HTML buttons can live independently of a form
+When working with JS, always ID tag your elements that will be needed to be used by JS
+In JS, a HTML element has the addEventListener(event: String, function: function) function, which will allow you to make the button fire a function when a specified interaction with the element is done (eg a click event). 
+No imports needed to use Math functions such as random and round can be used without importing
+JS tends to be vague when bugs occur in terms of what params I may had messed up on
+Is there a way to mandate that a param is of a certain type (like in Python)?
