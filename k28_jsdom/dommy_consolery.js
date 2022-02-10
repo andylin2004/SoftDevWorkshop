@@ -74,7 +74,7 @@ let red = function() {
 let stripe = function() {
   let items = document.getElementsByTagName("li");
   for(let i = 0; i < items.length; i++) {
-    if (i%2==0){
+    if (i%2===0){
       items[i].classList.add('red');
     } else {
       items[i].classList.add('blue'); //same as before, but alts between red and blue unless color already assigned
@@ -84,7 +84,7 @@ let stripe = function() {
 
 let fib = (n) => {
   let left = 0, right = 1;
-  if (n == 0) {
+  if (n === 0) {
     return left;
   }
   for (let i = 1; i < n; i++){
@@ -108,16 +108,16 @@ let gcd = (a, b) => {
   let gcdNum;
   if (a > b) {
       for (i = 2; i <= b; i++){
-          if (a % i == 0 && b % i == 0) {
+          if (a % i === 0 && b % i === 0) {
               gcdNum = i
           }
       }
       return gcdNum
-  } else if (a == b) {
+  } else if (a === b) {
       return a;
   } else {
       for (i = 2; i <= a; i++){
-          if (a % i == 0 && b % i == 0) {
+          if (a % i === 0 && b % i === 0) {
               gcdNum = i
           }
       }
