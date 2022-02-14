@@ -1,5 +1,5 @@
 //retrieve node in DOM via ID
-//var c =
+var c = document.getElementById("slate")
 
 //instantiate a CanvasRenderingContext2D object
 let ctx = c.getContext("2d");
@@ -15,15 +15,15 @@ let toggleMode = (e) => {
     } else {
         mode="rect";
     }
+    bToggler.innerText = mode;
 }
 
 let drawRect = (e) => {
-    var mouseX = e.clientX-e.offsetX;
-    var mouseY = e.clientY-e.offsetY;
+    var mouseX = e.offsetX;
+    var mouseY = e.offsetY;
     console.log("mouseclick registered at ", mouseX, mouseY);
-    beginPath();
-    fillStyle="red";
-    fillRect(mouseX,mouseY,50,75);
+    ctx.fillStyle="red";
+    ctx.fillRect(mouseX,mouseY,50,75);
     console.log(e);
 }
 
@@ -45,7 +45,7 @@ let draw = (e) => {
 
 //var wipeCanvas = function() {
 var wipeCanvas = () => {
-
+    ctx.clearRect(0, 0, c.offsetWidth, c.offsetHeight);
 }
 
 c.addEventListener("click", draw);
@@ -53,3 +53,4 @@ var bToggler = document.getElementById("buttonToggle") ;
 bToggler.addEventListener("click", toggleMode) ;
 let clearB = document.getElementById("buttonClear")
 clearB.addEventListener("click", wipeCanvas)
+bToggler.innerText = mode;
