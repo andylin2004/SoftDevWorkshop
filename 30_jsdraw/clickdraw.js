@@ -32,6 +32,10 @@ let drawCircle = (e) => {
     var mouseX = e.offsetX;
     var mouseY = e.offsetY;
     console.log("mouseclick registered at ", mouseX, mouseY);
+    ctx.beginPath();
+    ctx.fillStyle="red";
+    ctx.arc(mouseX, mouseY, 30, 0, 2 * Math.PI);
+    ctx.fill();
 }
 
 //var draw = function(e) {
