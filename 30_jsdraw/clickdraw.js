@@ -22,8 +22,8 @@ let drawRect = (e) => {
     var mouseY = e.clientY-e.offsetY;
     console.log("mouseclick registered at ", mouseX, mouseY);
     beginPath();
-    fillstyle="red";
-    fillrect(mouseX,mouseY,50,75);
+    fillStyle="red";
+    fillRect(mouseX,mouseY,50,75);
     console.log(e);
 }
 
@@ -49,7 +49,7 @@ var wipeCanvas = () => {
 }
 
 c.addEventListener("click", draw);
-// var bToggler = document. ;
-// bToggler. ;
-// let clearB = ;
-// clearB. ;
+var bToggler = document.getElementById("buttonToggle") ;
+bToggler.addEventListener("click", toggleMode) ;
+let clearB = document.getElementById("buttonClear")
+clearB.addEventListener("click", wipeCanvas)
