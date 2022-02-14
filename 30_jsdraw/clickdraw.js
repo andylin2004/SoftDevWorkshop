@@ -1,3 +1,10 @@
+// Doorstuck - Eric Guo and Andy Lin
+// Softdev pd2
+// K30 -- Canvas
+// 2022-02-14m
+
+// JS file for JavaScript canvas work
+
 //retrieve node in DOM via ID
 var c = document.getElementById("slate")
 
