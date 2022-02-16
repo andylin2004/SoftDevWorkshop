@@ -36,13 +36,23 @@ let drawDot = () => {
   console.log("drawDot invoked...")
 
   clear(c);
-  requestID = window.requestAnimationFrame(drawDot);
-  radius += 1;
+  window.cancelAnimationFrame(requestID);
+  if (growing) {
+    radius += 1;
+  } else {
+    radius -= 1;
+  }
   ctx.beginPath();
   ctx.arc(c.offsetHeight / 2, c.offsetWidth / 2, radius, 0, 360);
+  ctx.fillStyle = "orange"
   ctx.fill();
   console.log(requestID);
-  window.cancelAnimationFrame(requestID);
+  requestID = window.requestAnimationFrame(drawDot);
+  if (radius >= c.offsetHeight / 2) {
+    growing = false
+  } else if (radius <= 0){
+    growing = true
+  }
 
   /*
     ...to
