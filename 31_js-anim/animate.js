@@ -9,36 +9,42 @@
 
 
 //access canvas and buttons via DOM
-var c = // GET CANVAS
-var dotButton = // GET DOT BUTTON
-var stopButton = // GET STOP BUTTON
+let c = document.getElementById("playground");// GET CANVAS
+let dotButton = document.getElementById("buttonCircle"); // GET DOT BUTTON
+let stopButton = document.getElementById("buttonStop");// GET STOP BUTTON
 
 //prepare to interact with canvas in 2D
-var ctx = // YOUR CODE HERE
+let ctx = c.getContext("2d");
 
 //set fill color to team color
-ctx.fillStyle = // YOUR CODE HERE
+ctx.fillStyle = "light blue";
 
-var requestID;  //init global var for use with animation frames
+let requestID;  //init global let for use with animation frames
 
 
-//var clear = function(e) {
-var clear = (e) => {
-  console.log("clear invoked...")
-
-  // YOUR CODE HERE
+//let clear = function(e) {
+let clear = (e) => {
+  console.log("clear invoked...");
+  ctx.clearRect(0, 0, c.offsetWidth, c.offsetHeight);;
 };
 
 
-var radius = 0;
-var growing = true;
+let radius = 0;
+let growing = true;
 
 
-//var drawDot = function() {
-var drawDot = () => {
+//let drawDot = function() {
+let drawDot = () => {
   console.log("drawDot invoked...")
 
-  // YOUR CODE HERE
+  clear(c);
+  requestID = window.requestAnimationFrame(drawDot);
+  radius += 1;
+  ctx.beginPath();
+  ctx.arc(c.offsetHeight / 2, c.offsetWidth / 2, radius, 0, 360);
+  ctx.fill();
+  console.log(requestID);
+  window.cancelAnimationFrame(requestID);
 
   /*
     ...to
@@ -55,19 +61,11 @@ var drawDot = () => {
 };
 
 
-//var stopIt = function() {
-var stopIt = () => {
+//let stopIt = function() {
+let stopIt = () => {
   console.log("stopIt invoked...")
   console.log( requestID );
-
-  // YOUR CODE HERE
-  /*
-    ...to
-    Stop the animation
-
-    You will need
-    window.cancelAnimationFrame()
-  */
+  window.cancelAnimationFrame(requestID);
 };
 
 
