@@ -28,10 +28,8 @@ let clear = (e) => {
   ctx.clearRect(0, 0, c.offsetWidth, c.offsetHeight);;
 };
 
-
 let radius = 0;
 let growing = true;
-
 
 //let drawDot = function() {
 let drawDot = () => {
