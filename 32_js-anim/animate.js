@@ -1,7 +1,7 @@
-// Doorstuck - Eric Guo and Andy Lin
+// Math.randomers -- Andy Lin, Noakai Aronesty
 // Softdev pd2
-// K31 -- canvas based JS animation
-// 2022-02-15t
+// K32 -- canvas based JS animation now with DVD
+// 2022-02-17
 
 // model for HTML5 canvas-based animation
 
