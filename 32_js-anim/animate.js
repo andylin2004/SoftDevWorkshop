@@ -25,7 +25,6 @@ ctx.fillStyle = "light blue";
 
 let requestID;  //init global let for use with animation frames
 
-
 //let clear = function(e) {
 let clear = (e) => {
   console.log("clear invoked...");
@@ -36,8 +35,8 @@ let radius = 0;
 let growing = true;
 var changeX = 1;
 var changeY = 1;
-var posX = Math.random() * c.offsetWidth;
-var posY = Math.random() * c.offsetHeight;
+var posX = Math.random() * (c.offsetWidth - 75);
+var posY = Math.random() * (c.offsetHeight - 50);
 
 //let drawDot = function() {
 let drawDot = () => {
@@ -76,17 +75,25 @@ let drawDot = () => {
    */
 };
 
+var drawDVDButtonFunc = () => {
+  console.log(posX)
+  console.log(posY)
+  posX = Math.random() * (c.offsetWidth - 75);
+  posY = Math.random() * (c.offsetHeight - 50);
+  drawDVD()
+}
+
 var drawDVD = () => {
-  console.log("nooooooo")
+  console.log(requestID)
 
   if (requestID) {
     cancelAnimationFrame(requestID);
   }
 
-  if (posX <= 1 || posX >= 500-75) {
+  if (posX <= 0 || posX >= c.offsetWidth - 75) {
     changeX *= -1;
   }
-  if (posY <= 1 || posY >= 500-50) {
+  if (posY <= 0 || posY >= c.offsetHeight - 50) {
     changeY *= -1;
   }
 
@@ -97,7 +104,6 @@ var drawDVD = () => {
   ctx.drawImage(dvdLogo, posX, posY, 75, 50);
 
   requestID = requestAnimationFrame(drawDVD)
-
 }
 
 //let stopIt = function() {
@@ -110,4 +116,4 @@ let stopIt = () => {
 
 dotButton.addEventListener( "click", drawDot );
 stopButton.addEventListener( "click",  stopIt );
-dvdButton.addEventListener( "click",  drawDVD );
+dvdButton.addEventListener( "click",  drawDVDButtonFunc );
