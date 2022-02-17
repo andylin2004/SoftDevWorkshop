@@ -1,0 +1,5 @@
+Math.randomers -- Andy Lin, Noakai Aronesty
+Softdev pd2
+K32 -- canvas based JS animation now with DVD
+2022-02-17
+
