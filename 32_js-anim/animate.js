@@ -12,6 +12,10 @@
 let c = document.getElementById("playground");// GET CANVAS
 let dotButton = document.getElementById("buttonCircle"); // GET DOT BUTTON
 let stopButton = document.getElementById("buttonStop");// GET STOP BUTTON
+let dvdButton = document.getElementById("buttonDvd");// GET DVD BUTTON
+
+var dvdLogo = new Image();
+dvdLogo.src = "logo_dvd.jpg";
 
 //prepare to interact with canvas in 2D
 let ctx = c.getContext("2d");
@@ -30,6 +34,10 @@ let clear = (e) => {
 
 let radius = 0;
 let growing = true;
+var changeX = 1;
+var changeY = 1;
+var posX = Math.random() * c.offsetWidth;
+var posY = Math.random() * c.offsetHeight;
 
 //let drawDot = function() {
 let drawDot = () => {
@@ -68,6 +76,29 @@ let drawDot = () => {
    */
 };
 
+var drawDVD = () => {
+  console.log("nooooooo")
+
+  if (requestID) {
+    cancelAnimationFrame(requestID);
+  }
+
+  if (posX <= 1 || posX >= 500-75) {
+    changeX *= -1;
+  }
+  if (posY <= 1 || posY >= 500-50) {
+    changeY *= -1;
+  }
+
+  posX += changeX;
+  posY += changeY;
+
+  clear(ctx);
+  ctx.drawImage(dvdLogo, posX, posY, 75, 50);
+
+  requestID = requestAnimationFrame(drawDVD)
+
+}
 
 //let stopIt = function() {
 let stopIt = () => {
@@ -79,3 +110,4 @@ let stopIt = () => {
 
 dotButton.addEventListener( "click", drawDot );
 stopButton.addEventListener( "click",  stopIt );
+dvdButton.addEventListener( "click",  drawDVD );
