@@ -1,0 +1,12 @@
+// Doorstuck - Eric Guo and Andy Lin
+// Softdev pd2
+// K31 -- canvas based JS animation
+// 2022-02-15t
+
+In order to animate:
+
+first cancel the old animation with the window.cancelAnimationFrame with param requestID
+make the changes
+render the images
+reuqest a new animation frame with window.requestAnimationFrame with param function you want to run to do the animation
+do any checks on size after

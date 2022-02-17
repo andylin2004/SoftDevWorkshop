@@ -1,0 +1,13 @@
+Doorstuck :: Eric Guo and Andy Lin
+k30 -- Jsdraw
+Softdev pd2
+2022-02-14
+
+when drawing images always start with ctx.beginpath() to tell the program to prepare to draw
+fill() will fill the previously manipulated shape with a previously specified color (defaults to black)
+arc will make a curve that can ultimately create a circle (takes in centerX, centerY, radius, startAngle, endAngle)
+clearrect(x,y,width,height) will clear the rectangle that was specified to the default color
+you can actually pass variables into a function initally specified in a event listener
+fillrect will make a filled in rectangle at x,y with size width,height
+e.offsetX and e.offsetY will show the mouse location relative to the element you are manipulating
+ctx can be made with c.getElement("2d") (or 3d if you feel like so)

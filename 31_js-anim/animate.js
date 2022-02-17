@@ -1,5 +1,5 @@
-// Team Phantom Tollbooth :: Clyde Sinclair, Fierce Dragon
-// SoftDev pd0
+// Doorstuck - Eric Guo and Andy Lin
+// Softdev pd2
 // K31 -- canvas based JS animation
 // 2022-02-15t
 
