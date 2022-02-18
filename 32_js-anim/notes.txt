@@ -3,3 +3,9 @@ Softdev pd2
 K32 -- canvas based JS animation now with DVD
 2022-02-17
 
+Use a wrapper function if you want to do additional setup to a shape before animating for the first time (eg randomize position)
+Image() will create a new image with no properties set in HTML and MDN
+You can then manipulate the image source using IMAGE_OBJ.src = "imageNameHere"
+CANVAS_CONTEXT.drawImage(image, posX, posY, sizeX, sizeY) will actually render the image in a 2d canvas 
+Math.random() will return a random number from 0 to 1 (you can then multiply by a number to get a larger random range, or add to have a higher base random amount)
+Math.floor() rounds down
