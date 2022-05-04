@@ -1,0 +1,16 @@
+document: way to organize and store data as key value pair
+collection: organized store of documents, with common keys between the documents
+atlas: database in cloud for mongodb coursework, database as a service, for data storage and retrieval
+cluster: groups of servers that can be used to store data
+replica set: conneced mongodb instances storing same data (redundancy purposes)
+instance: single machine (locally or cloud) running some software
+atlas by default configs mongodb databases as a replica set
+
+things atlas can do:
+    manage cluster making
+    run + maintain db deployment
+    use cloud service provider of your choice
+    mess around with new things
+    multiple tiers of atlas w different configs and prices
+    (free tier has 3 server replica set, 512mb storage, doesnt expire, can use charts and realm, good for small-scale apps)
+
