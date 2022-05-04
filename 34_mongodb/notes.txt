@@ -1,0 +1,4 @@
+the good with mongodb:
+- no need for downtime to rejigger the data structure
+- is a nosql datastore
+- data is stored as documents and stored in collections of documents, so still structured
