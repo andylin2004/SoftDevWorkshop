@@ -14,3 +14,10 @@ things atlas can do:
     multiple tiers of atlas w different configs and prices
     (free tier has 3 server replica set, 512mb storage, doesnt expire, can use charts and realm, good for small-scale apps)
 
+atlas ui overview
+data explorer
+shell
+
+ide lab
+sandbox playground space
+reset workspace will reset the workspace to when you first got things
