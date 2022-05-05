@@ -1,0 +1,29 @@
+how does mongodb store data:
+data stored in json
+
+json:
+start and end w curly braces
+seperate each key and value with colon
+seperate each pair with comma
+keys (or fields in mongodb) in quotes
+can nest documents in mongodb
+good for when you need to export to a local machine to read it
+
+pros of json:
+friendly, readable, familiar
+
+cons of json:
+text based, space consuming, limited data type support
+
+bson:
+binary json
+compresses json data down to try and fix space consuming issue
+good for speed, space, and flexibility
+general purpose focus
+mongodb stores data in this format
+json still be stored and retrieved in mongodb
+good for cases when it needs to be backed up to the cloud or exported to a diff system
+
+bson cmds:
+mongodump --uri "<cluster uri>" dumps data
+mongoexport --uri "<cluster uri>" --collection=<collection name> --out=<filename>.json
