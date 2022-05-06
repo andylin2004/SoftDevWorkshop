@@ -24,6 +24,30 @@ mongodb stores data in this format
 json still be stored and retrieved in mongodb
 good for cases when it needs to be backed up to the cloud or exported to a diff system
 
-bson cmds:
-mongodump --uri "<cluster uri>" dumps data
-mongoexport --uri "<cluster uri>" --collection=<collection name> --out=<filename>.json
+cmds:
+mongodump --uri "<cluster uri>" dumps bson somewhere
+mongoexport --uri "<cluster uri>" --collection=<collection name> --out=<filename>.json can export files as some readable thing
+mongorestore --uri "<cluster uri>" --drop dump to import a bson dump
+mongoimport --uri "<cluster uri>" --drop=<filename>.json import data in json (can also use csv and other popular data storage formats)
+(should use --drop dump for mongorestore and mongoimport)
+--collection <databasename> flag will allow you to import the database file and set the collection name to something
+
+uri string: uniform resource identifier
+srv - establishes a secure connection
+in our case, this is to pass the user and password through which the next part can then be used to direct to our cluster and database
+ex: mongodb+srv://user:password@clusterURI.mongodb.net/database
+if database not specified in the uri, then the database name used will be test
+
+data explorer
+namespace: collection name and database name together
+allows us to interact with documents in different ways
+queries:
+json format, but only for what you want to match
+returns documents where there are matches for the field value pairs
+
+find cmd:
+show dbs show all dbs in database
+use <database> to select a database to look at
+show collections in order to view all collections in a database
+<namespace>.find(<json query>) to find 
+it to find the next 20 documents with matching queries
