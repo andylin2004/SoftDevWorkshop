@@ -46,8 +46,14 @@ json format, but only for what you want to match
 returns documents where there are matches for the field value pairs
 
 find cmd:
+first connect (connection details in the atlas panel)
 show dbs show all dbs in database
 use <database> to select a database to look at
 show collections in order to view all collections in a database
-<namespace>.find(<json query>) to find 
-it to find the next 20 documents with matching queries
+db.<collection name>.find(<json query>) to find (even works with only {} as the query, but it will return any 20)
+it to find the next 20 documents with matching queries (or iterates via a cursor)
+cursor is a pointer to a result set of a query
+.count() at end of query command to return num of documents that match the given query
+.pretty() at end of query command to prettyprint the documents that match a given query
+
+mongo shell is a fully functioning js interpreter
