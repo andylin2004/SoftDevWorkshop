@@ -21,3 +21,5 @@ shell
 ide lab
 sandbox playground space
 reset workspace will reset the workspace to when you first got things
+
+password: m001-mongodb-basics
