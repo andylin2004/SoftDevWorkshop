@@ -1,3 +1,9 @@
+Andy Lin
+SoftDev
+K36 -- MongoDB using the shell and data explorer, file types
+2022-05-03
+time spent: 1
+
 how does mongodb store data:
 data stored in json
 

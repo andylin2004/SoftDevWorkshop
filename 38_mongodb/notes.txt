@@ -1,3 +1,9 @@
+Andy Lin
+SoftDev
+K38 -- logic operators, array operators, filtering results in output, dot notation
+2022-05-12
+time spent: 1
+
 query operators:
 has $ before the instruction to do stuff like:
 preceding mql operators, aggregation pipeline stages, and allows access to field values

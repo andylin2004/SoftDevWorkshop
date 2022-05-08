@@ -1,3 +1,9 @@
+Andy Lin
+SoftDev
+K37 -- updating, removing, adding docs
+2022-05-09
+time spent: 1
+
 inserting new docs into collection via atlas
 insert document button
 shows a window with ways to input things

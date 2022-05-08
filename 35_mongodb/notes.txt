@@ -1,3 +1,9 @@
+Andy Lin
+SoftDev
+K35 -- MongoDB basics
+2022-05-03
+time spent: 1
+
 document: way to organize and store data as key value pair
 collection: organized store of documents, with common keys between the documents
 atlas: database in cloud for mongodb coursework, database as a service, for data storage and retrieval
