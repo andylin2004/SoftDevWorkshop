@@ -26,7 +26,8 @@ updateMany(<json query>, {<operation>: <json query to have operation change by>}
 operation possible types:
 $inc to increase a value
 $set to set a value, even if the value was not even initialized
-$push: pushes an element into an array field
+$push: pushes an element into an array field or converts a field into an array field if it was previously a different type
+$unset will set a value to null
 their doc is your best friend for this
 
 deleting documents and collections
