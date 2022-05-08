@@ -1,0 +1,54 @@
+query operators:
+has $ before the instruction to do stuff like:
+preceding mql operators, aggregation pipeline stages, and allows access to field values
+
+comparison: (uses same notation as the previous setting things, use the find command for this if using shell)
+$eq: equal to
+$ne: not equal to
+$gte: greater than or equal to
+$lte: less than or equal to
+$gt: greater than
+$lt: less than
+
+logic operators:
+$and: returns all of the specified query clauses (by default, queries use this and behavior) (use this when the same operator is used more than once in a query)
+$or: returns documents if at least one fo the query clauses is matched
+$nor: returns documents that fails to match either given clauses
+formatting for above three: {<operator>: [{statement1}, {statement2},....]}
+
+$not: negates query requirement
+formatting: {$not: {statement}}
+
+expressive operators $expr
+allows for aggregation expressions in the query language
+formatting: {$expr: {<expression>}}
+allows us to use vars and conditionals, even with fields within the same document
+
+uses of $ symbol:
+for operators
+looking at a field value
+
+aggregation syntax:
+{<operator>: {<field>, <value>}}
+
+array operators:
+$push: see 37 notes
+for filtering based on what an array contains, use {"<array name>": <whatever you want in the array>}
+for filtering based on what things that an array contains, use $all
+formatting: {"<array name>": {"$all": [<whatever you want in the array>]}}
+you can limit the array length with $size with a number
+formatting: {"<array name>": {"$size": <number>}}
+
+projection:
+allows you to choose which fields render out in the find output
+formatting: db.<collection>.find(<json query>, {"<entry>": 1, ...}) to show the things with 1 and the id field, or db.<collection>.find(<json query>, {"<entry>": 0, ...}) to show all except for the entries that you said 0 for--no mixing allowed!
+only time you can mix is if you want to hide the id fields
+$elemMatch: matches all documents where a specified array contains an element that matches to some query (this can also be used in the find part as well)
+formatting: {"<array name>": {"$elemMatch": {"<entry>": <json query>}}}
+
+dot notation
+allows you to view specifically at a subdocument within a document (path to the field you're looking for)
+can also go by index number (eg 0, 1, etc)
+
+
+can do regex in mongodb via {"$regex": "<query>"}
