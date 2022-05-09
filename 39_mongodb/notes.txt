@@ -1,0 +1,43 @@
+aggregation framework
+another way to query data in mongodb
+can be used to compute and reshape data
+formatting: db.<collection name>.aggregate([{"$match": <match json params>}, {"$project": <data to return or not return json>}])
+since its an array, you will need to properly issue out the filters and commands in the correct order (think of this as a literal pipe)
+should go from a more generalized filter to a finer one
+(more like a chemical factory and less like a pipeline now?!)
+non filtering stages works with the data in the cursor, not modifying the data
+
+$group stage:
+operator that takes an incoming stream of data and siphons it into multiple distinct reservoirs
+syntax: {"$group": {"_id": <expression>, <field1>: {<accumulator1>: <expression1>}, ...}} (we group by expression)
+
+sort and limit
+.sort(<json thing>) will sort a collection by a certain json element (1 is ascending, -1 is descending, works with numbers and strings)
+.limit(<num>) will limit the collection result to the num
+cursor methods dont apply to the stored data
+if you want to limit and sort at the same time, either .limit().sort() and .sort().limit() works the same way
+if you just use limit, results dont get filtered
+
+indexes
+makes queries more efficient
+more impactful way of improving query performance
+use createIndex(<json sort by thing>)
+special data structure that stores a small portion of the collection's data set in an easy to traverse form (or a datastructure to optimize queries)
+index to:
+support queries
+when there are a bunch of cursor commands being used on a dataset and we would rather speed things up
+when we want to cut down on the number of cursor commands being used in a single line (especially sorting)
+we can also have combined index queries, which will sort based on the first given sort, then the second, and so on
+indexes can coexist, so that you have as much speed as possible
+
+data modeling:
+a way to organize fields in a document to support your application performance and querying capabilities
+rule: data is stored in the way its used
+consider what will be stored, and who is using the application
+
+upsert:
+everything in mql that is used to locate a document in a collection can also be used to modify a document
+upsert is an option within update or updateone that fits into the third json field eg db.collection.updateOne({}, {}, {"upsert": true})
+allows us to either do an update (if there is a match) or a insert (if there isnt a match), preventing us from doing more work than needed
+consider if the query is enough to create a new document, and if the new document will have a similar form to the other documents in the collection
+use upsert: false if youd rather insert a new document or update an existing one only
