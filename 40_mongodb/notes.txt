@@ -1,3 +1,9 @@
+Andy Lin
+SoftDev
+K40 -- MongoDB gui tools and other data resources
+2022-05-12
+time spent: 1
+
 more data explorer: atlas
 in the index tab, you view indexes in collections, make new indexes, and drop them
 can also allow you to see how useful an index is so that you can drop the less used ones
@@ -32,3 +38,6 @@ can manually make a index in compass and throw in options as needed
 more mongodb compass:
 explain plan will be able to show the documents that fall under a certain query
 shows the stages of the retrieval process
+shows if a retrieval is efficient or not and why
+validation tab: allows you to ensure that all documents follow the same format and ensure that whats inside that value is up to your specifications (require something or ensure that a value fits with a range)
+schema is big brain enough to realize if your data has coordinates
