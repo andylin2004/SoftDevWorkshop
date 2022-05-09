@@ -23,3 +23,12 @@ can make aggregation pipelines out of charts
 
 compass:
 gui tool to connect to mongodb database
+NEVER EVER TOUCH THE ADMIN CONFIG OR LOCAL DATABASES OR THINGS WILL BLOW UP (unless support asks you to mess with it)
+you can see size of database, num of collections and indexes
+allows you to have the atlas ui locally, plus see things as a table
+on compass, you can run schema locally
+can manually make a index in compass and throw in options as needed
+
+more mongodb compass:
+explain plan will be able to show the documents that fall under a certain query
+shows the stages of the retrieval process
