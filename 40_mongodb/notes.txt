@@ -1,0 +1,25 @@
+more data explorer: atlas
+in the index tab, you view indexes in collections, make new indexes, and drop them
+can also allow you to see how useful an index is so that you can drop the less used ones
+schema anti-patterns tabs will advise you on what you should do to your data model
+aggregation tab allows you to build aggregation pipelines in a gui view and see how different ways to use it affect databases
+    can drag and drop stages of the pipelines
+    like vscode, but more interactive
+    can export the aggregation pipeline once you polished it enough
+atlas search: finer indexing for advanced indexing
+
+atlas features:
+organization: group projects, teams, billing (although you dont need to stress if you're in the free tier)
+projects: shows all projects, can configure access and alerts
+each project can have multiple atlas clusters, as long as each cluster has an unique name
+can also access realm and charts
+realm allows users to create web, mobile, or other apps without worrying about managing or scaling servers, but can still easily track data once needed
+there are docs for each mongodb services
+
+charts: 
+allows users to make dynamic data visualizations and use it anywhere
+can connect to many databases, can use many different data visualizations
+can make aggregation pipelines out of charts
+
+compass:
+gui tool to connect to mongodb database
